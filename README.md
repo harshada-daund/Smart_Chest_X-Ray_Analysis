@@ -67,10 +67,7 @@ cd Smart_Chest_X-Ray_Analysis
 python3 -m venv env  
 source env/bin/activate  # On Windows, use `env\Scripts\activate`  
 ```  
-3. **Install dependencies:**  
-```bash  
-pip install -r requirements.txt  
-```  
+3. **Install dependencies:**    
 
 ### Usage  
 1. **Run the application:**  
