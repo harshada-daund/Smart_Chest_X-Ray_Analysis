@@ -1,91 +1,96 @@
-<h1 align="center">🩺 Chest Disease Detection using Deep Learning (R-CNN)</h1>  
-<p align="center"><i>Accelerating Diagnosis with Artificial Intelligence</i></p>  
+# 🩺 Smart Chest Disease Detection using Deep Learning  
+
+## Overview  
+This project leverages deep learning techniques to automate the detection and classification of chest diseases from X-ray images. Using the **Faster R-CNN** architecture, the model aids healthcare professionals in diagnosing conditions such as pneumonia, tuberculosis, and lung cancer. With the **NIH ChestX-ray14** dataset, this solution delivers robust and accurate results to enhance diagnostic processes.
 
 ---
 
-<h2>✨ Description</h2>  
-<p align="justify">  
-The <b>Chest Disease Detection using Deep Learning (R-CNN)</b> project automates the detection and classification of chest diseases from X-ray images using Faster R-CNN architecture. It assists radiologists in diagnosing conditions like pneumonia, tuberculosis, and lung cancer. The project leverages the NIH ChestX-ray14 dataset, providing annotated data for robust training and evaluation.  
-</p>  
+## Objectives  
+- Develop an AI-powered model for detecting thoracic diseases using Faster R-CNN.  
+- Optimize model performance through metrics such as accuracy, precision, recall, and F1-score.  
+- Utilize techniques like data augmentation and transfer learning to enhance model accuracy.  
+- Produce interpretable outputs by generating bounding boxes around areas of interest.  
 
 ---
 
-<h2>🎯 Objectives</h2>  
-<p align="justify">  
-- Design a Faster R-CNN-based model for thoracic pathology detection.<br>  
-- Evaluate model performance using precision, recall, F1-score, and accuracy.<br>  
-- Apply data augmentation and transfer learning to improve accuracy.<br>  
-- Provide interpretable outputs through bounding box predictions.<br>  
-</p>  
+## Technologies Used  
+- **Frameworks:** PyTorch, Detectron2  
+- **Model:** Faster R-CNN with ResNet-50 backbone  
+- **Visualization Tools:** Matplotlib, Seaborn  
+- **Utilities:** OpenCV, Google Colab  
+- **Dataset:** NIH ChestX-ray14  
 
 ---
 
-<h2>🛠️ Technologies Used</h2>  
-<p align="justify">  
-- <b>Frameworks:</b> PyTorch, Detectron2<br>  
-- <b>Visualization Tools:</b> Matplotlib, Seaborn<br>  
-- <b>Model:</b> Faster R-CNN with ResNet-50 backbone<br>  
-- <b>Dataset:</b> NIH ChestX-ray14<br>  
-- <b>Utilities:</b> OpenCV, Google Colab<br>  
-</p>  
+## Dataset  
+The **NIH ChestX-ray14** dataset includes over **112,000 chest X-ray images** annotated with 14 disease classes such as Atelectasis, Cardiomegaly, and Pneumothorax. This dataset ensures the model is trained on a diverse set of images to provide reliable predictions.
 
 ---
 
-<h2>📂 Dataset</h2>  
-<p align="justify">  
-The <b>NIH ChestX-ray14</b> dataset contains over 112,000 annotated chest X-ray images across 14 disease classes, such as Atelectasis, Cardiomegaly, and Pneumothorax.  
-</p>  
+## Model Performance  
+### Key Metrics  
+- **Accuracy:** 89%  
+- **Precision:** 88%  
+- **Recall:** 92%  
+- **F1-Score:** 91%
+  
+These metrics highlight the model's effectiveness in detecting and classifying chest diseases.
+
+### Stability & Loss Curve  
+![Loss Curve](./LossCurve.png)  
+The loss curve demonstrates the model’s ability to converge during training, ensuring stable performance across different datasets.
+
+### Example Predictions  
+![Bounding Box Predictions](./multipleIpred.png)  
+The model generates bounding boxes around areas of interest, with associated confidence scores, showcasing its capability to detect regions indicative of disease.
 
 ---
 
-<h2>📈 Results</h2>  
-
-<h3>1️⃣ Performance Metrics</h3>  
-<p align="justify">  
-The model achieved strong performance metrics across multiple disease classes:  
-</p>  
-<ul>
-  <li><b>F1-Score:</b> <mark>91%</mark></li>
-  <li><b>Accuracy:</b> <mark>89%</mark></li>
-  <li><b>Precision:</b> <mark>88%</mark></li>
-  <li><b>Recall:</b> <mark>92%</mark></li>
-</ul>  
-<p align="justify">  
-These metrics demonstrate the model's ability to accurately detect chest diseases while balancing false positives and false negatives.
-</p>  
-
-<h3>2️⃣ Loss Curve</h3>  
-<p align="center">
-<img src="./LossCurve.png" alt="Loss Curve" width="700">
-</p>  
-<p align="justify">  
-The loss curve tracks the model's convergence over epochs, showcasing its stability during training and validation.  
-</p>
-
-<h3>3️⃣ Example Predictions with Confidence Scores</h3>  
-<p align="center">
-<img src="./multipleIpred.png" alt="Bounding Box Predictions" width="700">
-</p>  
-<p align="justify">  
-The bounding boxes represent detected regions of interest with associated confidence scores, demonstrating the model's localization capabilities.  
-</p>
-
-<h3>4️⃣ Prediction Table</h3>  
-<p align="center">
-<img src="./ImagePredictionTable.png" alt="Prediction Table" width="700">
-</p>  
-<p align="justify">  
-This table provides quantitative insights into the model's predictions for sample X-rays, including bounding box coordinates and confidence scores.  
-</p>
+## Future Enhancements  
+- **Real-Time Diagnostics:** Integrate APIs for real-time image analysis and diagnostics.  
+- **Explainable AI:** Implement methods such as saliency maps to improve model interpretability.  
+- **Fine-Grained Analysis:** Adopt Mask R-CNN for pixel-level segmentation of disease regions.  
+- **Global Dataset Expansion:** Extend training to include more diverse datasets to cover rare diseases.  
 
 ---
 
-<h2>🌟 Future Scope</h2>  
-<p align="justify">  
-- <b>Real-Time Data:</b> Integrate APIs for live diagnostics.<br>  
-- <b>Explainable AI:</b> Enhance model interpretability using saliency maps.<br>  
-- <b>Pixel-Level Segmentation:</b> Adopt Mask R-CNN for fine-grained segmentation.<br>  
-- <b>Global Dataset Expansion:</b> Include rare diseases and multi-institutional data.<br>  
-</p>  
+## Getting Started  
+
+### Installation  
+1. **Clone the repository:**  
+```bash  
+git clone https://github.com/harshada-daund/Smart_Chest_X-Ray_Analysis.git  
+cd Smart_Chest_X-Ray_Analysis  
+```  
+2. **Set up a virtual environment:**  
+```bash  
+python3 -m venv env  
+source env/bin/activate  # On Windows, use `env\Scripts\activate`  
+```  
+3. **Install dependencies:**  
+```bash  
+pip install -r requirements.txt  
+```  
+
+### Usage  
+1. **Run the application:**  
+```bash  
+python app.py  
+```  
+2. **Upload an X-ray image** via the provided interface.  
+3. **View results** including detected diseases and confidence scores.  
 
 ---
+
+## Contributing  
+We welcome contributions from the community. To contribute:  
+- Fork the repository.  
+- Create a feature branch (`git checkout -b feature-branch`).  
+- Commit your changes (`git commit -m 'Add new feature'`).  
+- Push to the branch (`git push origin feature-branch`).  
+- Open a pull request.  
+
+---
+
+By leveraging the power of deep learning, this project aims to assist healthcare professionals by automating chest disease detection, making diagnostic processes faster, more accurate, and more accessible.  
+
